@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     
     resources :ingredients
     
+    get '/recipes/meal/:meal', to: 'recipes#findByMeal', as: 'meal'
+    
     root 'welcome#index'
 end

@@ -6,12 +6,8 @@
   <% @recipes.each do |recipe| %>
     <tr>
         <td><h3><%= recipe.name %> - <%= recipe.meal %></h3></td></tr>
-    <tr><td><b>Method</b><br><br><%= recipe.method %></td></tr>
-    <tr><td><br><b>Ingredients</b><br><br>
-        <ul>
-        <%= render recipe.recipe_ingredients %>
-        </ul>
-        </td></tr>
+    <tr>
+        <td><b>Method</b><br><br><%= recipe.method %></td></tr>
     <tr>
       <td><br><%= link_to 'Show', recipe_path(recipe) %></td>
     </tr>

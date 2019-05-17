@@ -11,8 +11,12 @@
 </p>
 
 <p>
-  <strong>Meal:</strong>
-  <%= @recipe.meal %>
+  <strong>Meals:</strong>
+<% if false %>
+    <% @recipe.meal.each do |meal| %>
+        <%= link_to meal, meal_path(meal) %>
+    <% end %>
+    <% end %>
 </p>
 <!-- end-->
 
@@ -44,7 +48,7 @@
 
  
   <p>
-    <%= form.submit %>
+    <%= form.submit 'Add to recipe' %>
   </p>
 <% end %>
 <!-- end -->

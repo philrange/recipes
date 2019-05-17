@@ -16,12 +16,7 @@ class IngredientsController < ApplicationController
         
         @ingredient.save
         
-        
-        if @recipe
-            redirect_to @recipe
-        else 
-            redirect_to @ingredient
-        end
+        redirect_to @ingredient
     end
     
     private

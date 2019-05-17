@@ -19,6 +19,10 @@ class RecipesController < ApplicationController
         redirect_to @recipe
     end
     
+    def findByMeal
+        @recipes = Recipe.where(meal: params[:meal])
+    end
+    
     private
         def recipe_params
             params.require(:recipe).permit(:name, :method, :meal)
