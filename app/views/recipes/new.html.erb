@@ -1,0 +1,22 @@
+<h1>New Recipe</h1>
+
+<%= form_with scope: :recipe, url: recipes_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :method %><br>
+    <%= form.text_field :method %>
+  </p>  
+
+  <p>
+    <%= form.label :meal %><br>
+    <%= form.select :meal, :meal => Recipe.meals.keys.to_a %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

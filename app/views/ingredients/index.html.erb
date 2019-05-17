@@ -1,0 +1,17 @@
+<h1>Listing ingredients</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Unit</th>
+    <th></th>
+  </tr>
+ 
+  <% @ingredients.each do |ingredient| %>
+    <tr>
+      <td><%= ingredient.name %></td>
+      <td><%= ingredient.unit %></td>
+      <td><%= link_to 'Show', ingredient_path(ingredient) %></td>
+    </tr>
+  <% end %>
+</table>

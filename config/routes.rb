@@ -3,5 +3,11 @@ Rails.application.routes.draw do
     
     get 'welcome/index'
     
+    resources :recipes do
+        resources :recipe_ingredients
+    end
+    
+    resources :ingredients
+    
     root 'welcome#index'
 end
